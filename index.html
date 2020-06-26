@@ -1,0 +1,143 @@
+<html>    
+   <head>  
+       <style>
+	body{
+	background-image:url(pinks.jpg);
+	border:10px solid black;
+		}
+.in{
+
+    
+}
+@media screen and (max-width:600px){  /*media query k through flex ko full width krdiya small screen p*/
+    div.calculator{
+        width:95%;
+	margin-top:80px;
+        
+    }
+}
+
+	.calculator{
+		padding-top:20px;
+		margin-top:150px;
+		text-align:center;
+		justify-content:center;
+		border-style:solid;
+		 background-color:gray;
+		 height:250px;
+		 width:500px;
+		display: flex; /*display flex nai apnai andar mojud divs ko inline krdiya h*/
+    		height:auto;
+    		flex-direction: row;
+    		flex-wrap: wrap; /*isse responsive hora h flex*/
+		}
+	h1{
+	text-decoration:underline;
+	 font-style:oblique;
+	 font-weight:bold;
+	 font-size:25px;
+	}
+	table{
+		width=12%
+		}
+		</style>
+<script language="javascript" type="text/javascript">
+	       function squareroot(){
+		     var dom=document.getElementById("textfieldd").value;
+		      var num=Math.sqrt(dom);
+                 document.getElementById("textfieldd").value=num;
+		   }    
+		   function logg(){
+		     var dom=document.getElementById("textfieldd").value;
+		      var num=Math.log(dom);
+                 document.getElementById("textfieldd").value=num;
+		   }
+		   function power(){
+		     var dom=document.getElementById("textfieldd").value;
+		      var num=Math.pow(dom,2);
+                 document.getElementById("textfieldd").value=num;
+		   }
+		   function cube(){     //cube root function
+		     var dom= document.getElementById("textfieldd").value;
+			    var num=Math.pow(dom,3);
+				   document.getElementById("textfieldd").value=num;
+		   }
+		   function sinn(){    //sin function
+		     var dom=document.getElementById("textfieldd").value;
+			    var num=Math.sin(dom);
+				   document.getElementById("textfieldd").value=num;
+		   
+		   }
+		   function coss(){     //cos function
+		     var dom= document.getElementById("textfieldd").value;
+			    var num=Math.cos(dom);
+				   document.getElementById("textfieldd").value=num;
+		   
+		   }
+		   function tann(){      //tan function
+		     var dom=document.getElementById("textfieldd").value;
+			   var num=Math.tan(dom);
+			      document.getElementById("textfieldd").value=num;}
+		   function round(){
+		     var dom=document.getElementById("textfieldd").value;
+			    var num=Math.round(dom);
+			document.getElementById("textfieldd").value=num;
+		   }
+		   
+   
+     </script>
+
+             </head> 
+          <body>  
+<div class="in">
+		 <center><div class="calculator" >
+		     <form name=calc>  
+		           <h1>  Scientific Calculator </span> </h1>
+      				  <br><br>   
+					     <input type="textfield"  name="action" id="textfieldd" value="" size="45px" ;>  <br> 
+						   <table >  
+   						      <tr>   
+							   <td><input type="button" name="1" value="   1    "  onclick=document.calc.action.value+=1></td> 
+   							    <td><input type="button" name="2" value="   2    "  onclick=document.calc.action.value+=2></td>  
+     							  <td><input type="button" name="3" value="   3    "  onclick=document.calc.action.value+=3></td>  
+								    <td><input type="button" name="+" value="   +    "  onclick=document.calc.action.value+='+'></td>   
+									  <td> <input type="button" name="/" value="  /" style="width:60px;"   onclick=document.calc.action.value+='/'> </td>
+									    <td> <input type="button" name="sqroot" value="  sqrroot  "  onclick="squareroot()"> </td>
+									     </tr>  
+								<tr>   
+								 <td><input type=button name="4" value="   4    "  onclick=document.calc.action.value+=4></td>   
+								   <td><input type=button name="5" value="   5    "  onclick=document.calc.action.value+=5></td> 
+     							     <td><input type=button name="6" value="   6    "  onclick=document.calc.action.value+=6></td>   
+								       <td><input type=button name="-" value="   -    "  onclick=document.calc.action.value+='-'></td>  
+									     <td> <input type="button" name="log" value="  log  " style="width:60px;"  onclick="logg()"> </td>
+										   <td> <input type="button" name="exp" value="  exp  " style="width:72px;"  onclick="power()"> </td>
+									      
+									      
+   									    </tr>   
+								<tr>    
+								    <td><input type=button name="7" value="   7    " onclick=document.calc.action.value+=7></td> 
+									  <td><input type=button name="8" value="   8    " onclick=document.calc.action.value+=8></td>  
+									    <td><input type=button name="9" value="   9    " onclick=document.calc.action.value+=9></td>   
+										  <td><input type=button name="*" value="   *    "  onclick=document.calc.action.value+='*'></td> 
+                                            <td><input type=button name="^3" value="   ^3    " style="width:60px;"  onclick="cube()"></td>	
+                                               <td><input type=button name="sin" value="  sin    " style="width:72px;"  onclick="sinn()"></td>											
+								 </tr>   
+								 
+								 <tr>  
+  								    <td><input type=button name="0" value="   0    " onclick=document.calc.action.value+=0></td>   
+									  <td><input type=reset name="reset" value="Reset" ></td>  
+ 									   <td><input type=button name="=" value="   =   "onclick=document.calc.action.value=eval(document.calc.action.value)></td>
+                                         <td><input type=button name="." value="   .   "  onclick=document.calc.action.value+='.'></td>
+										 <td><input type=button name="cos" value="  cos    "  onclick="coss()"></td>	
+                                            <td><input type=button name="tan" value="  tan    " style="width:72px;"  onclick="tann()"></td>
+            										
+ 							     </tr>
+								  </table>  
+									   </form> 
+									     </div>
+										  </center> 
+										</div>
+
+									         </body>
+
+										      </html>
